@@ -11,3 +11,6 @@ class TestAlbum(unittest.TestCase):
         self.assertEqual("Victim", self.album.title)
         self.assertEqual(self.artist, self.album.artist)
         self.assertEqual("Rock", self.album.genre)
+
+    def test_artist_is_object(self):
+        self.assertEqual("Halflives", self.album.artist.name)

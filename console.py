@@ -1,3 +1,4 @@
+
 from models.artist import Artist
 from models.album import Album
 
@@ -9,13 +10,22 @@ artist_1 = Artist('P!nk')
 artist_2 = Artist('Elton John')
 
 artist_repository.save(artist_1)
-# artist_repository.save(artist_2)
+artist_repository.save(artist_2)
 
 album_1 = Album('Funhouse', artist_1, 'pop-rock')
+album_2 = Album('Diamonds', artist_2, 'pop-rock')
 
 album_repository.save(album_1)
+album_repository.save(album_2)
 
-artists = artist_repository.select_all()
+print(artist_repository.select(artist_1.id).__dict__)
 
-for artist in artists:
-    print(artist.__dict__)
+albums = album_repository.select_all()
+
+for album in albums:
+    print(album.__dict__)
+
+# artists = artist_repository.select_all()
+
+# for artist in artists:
+#     print(artist.__dict__)

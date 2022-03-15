@@ -9,7 +9,11 @@ artist_1 = Artist('P!nk')
 artist_2 = Artist('Elton John')
 
 artist_repository.save(artist_1)
-artist_repository.save(artist_2)
+# artist_repository.save(artist_2)
+
+album_1 = Album('Funhouse', artist_1, 'pop-rock')
+
+album_repository.save(album_1)
 
 artists = artist_repository.select_all()
 

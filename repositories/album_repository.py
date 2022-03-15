@@ -40,3 +40,4 @@ def delete_all():
     sql = "DELETE FROM albums"
     run_sql(sql)
 
+

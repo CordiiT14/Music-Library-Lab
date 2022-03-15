@@ -18,22 +18,18 @@ import repositories.artist_repository as artist_repository
 # album_repository.save(album_1)
 # album_repository.save(album_2)
 
-# albums = album_repository.select_all()
+album_repository.delete_all()
 
-# for album in albums:
-#     print(album.__dict__)
+albums = album_repository.select_all()
 
-# artists = artist_repository.select_all()
+for album in albums:
+    print(album.__dict__)
 
-# for artist in artists:
-#     print(artist.__dict__)
+artist_repository.delete_all()
 
-# artist_1 = Artist('Bjork')
-# album_3 = Album('Vespertine', artist_1, 'Bjrock')
-# artist_repository.save(artist_1)
-# album_repository.save(album_3)
+artists = artist_repository.select_all()
 
-# vespertine = album_repository.select(album_3.id)
-# print(vespertine.title)
-# album_repository.delete_all()
-# artist_repository.delete_all()
+for artist in artists:
+    print(artist.__dict__)
+
+

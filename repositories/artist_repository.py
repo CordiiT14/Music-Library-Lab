@@ -30,3 +30,7 @@ def select(id):
     if result is not None:
         artist = Artist(result['name'], result['id'])
     return artist
+
+def delete_all():
+    sql = "DELETE FROM artists"
+    run_sql(sql)
